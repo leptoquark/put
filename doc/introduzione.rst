@@ -27,6 +27,20 @@ disponibili a legislazione vigente.
 Schema per la definizione dell'allegato all'articolo 4 bis
 ==========================================================
 
+.. mermaid::
+
+   sequenceDiagram
+      participant Alice
+      participant Bob
+      Alice->John: Hello John, how are you?
+      loop Healthcheck
+          John->John: Fight against hypochondria
+      end
+      Note right of John: Rational thoughts <br/>prevail...
+      John-->Alice: Great!
+      John->Bob: How about you?
+      Bob-->John: Jolly good!
+
 .. schema:: allegato_articolo_4_bis
     :title: Schema Allegato articolo 4 bis
     :description: Schema per la definizione dell'allegato all'articolo 4 bis

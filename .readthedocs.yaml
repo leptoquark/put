@@ -9,6 +9,10 @@ build:
   os: ubuntu-22.04
   tools:
     python: "3.12"
+    nodejs: "16"
+  jobs:
+    post_install:
+      - npm install -g @mermaid-js/mermaid-cli
     # You can also specify other tool versions:
     # nodejs: "20"
     # rust: "1.70"
