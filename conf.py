@@ -6,13 +6,12 @@ import os
 
 # -- PROJECT Variables ----------------------------------------------------
 settings_project_name = 'Libro bianco IA'
-settings_copyright_copyleft = 'CC0 1.0 Universal - Agenzia per l\'Italia Digitale'
-settings_editor_name = 'AgID - Agenzia per l\'Italia Digitale'
-settings_doc_version = "draft"
-settings_doc_release = "draft"
-settings_basename = 'librobiancoIA'
-settings_file_name = 'librobiancoIA'
-settings_discourse_url = 'https://ia.italia.it/community/'
+settings_copyright_copyleft = 'CC0 1.0 Universal - Autorità Nazionale Anticorruzione'
+settings_editor_name = 'A.N.AC. - Autorità Nazionale Anticorruzione'
+settings_doc_version = "stabile"
+settings_doc_release = "stabile"
+settings_basename = 'put-docs'
+settings_file_name = 'put-docs'
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -71,7 +70,7 @@ exclude_patterns = ['.DS_Store', 'README.md', 'LICENSE.md', '.venv']
 pygments_style = 'sphinx'
 
 # -- Options for HTML output ----------------------------------------------
-html_theme = 'sphinx_italia_theme'
+html_theme = 'sphinx_anac_theme'
 
 html_theme_path = ["_themes", ]
 
