@@ -1,0 +1,283 @@
+﻿{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "intestazione": {
+            "$ref": "#/definitions/IntestazioneTypeDef"
+        },
+        "annoDiRiferimanto": {
+            "$ref": "#/definitions/AnnoRifTypeDef"
+        },
+        "organizzazione": {
+            "type": "object",
+            "oneOf": [
+                {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "organiDiIndirizzoPolitico": {
+                            "type": "array",
+                            "minItems": 1,
+                            "items": [
+                                {
+                                    "$ref": "#/definitions/OrganoIstituzionaleTypeDef"
+                                }
+                            ]
+                        },
+                        "organigramma": {
+                            "$ref": "#/definitions/URLTypeDef"
+                        }
+                    },
+                    "required": [
+                        "organiDiIndirizzoPolitico",
+                        "organigramma"
+                    ]
+                },
+                {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "organigramma": {
+                            "$ref": "#/definitions/URLTypeDef"
+                        },
+                        "contatti": {
+                            "$ref": "#/definitions/ContattiTypeDef"
+                        }
+                    },
+                    "required": [
+                        "organigramma",
+                        "contatti"
+                    ]
+                },
+                {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "organiDiAmministrazione": {
+                            "type": "array",
+                            "minItems": 1,
+                            "items": [
+                                {
+                                    "$ref": "#/definitions/OrganoIstituzionaleTypeDef"
+                                }
+                            ]
+                        }
+                    },
+                    "required": [
+                        "organiDiAmministrazione"
+                    ]
+                }
+            ]
+        }
+    },
+    "required": [
+        "intestazione",
+        "annoDiRiferimanto",
+        "organizzazione"
+    ],
+    "definitions": {
+        "OrganoIstituzionaleTypeDef": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "denominazioneOrganoIstit": {
+                    "$ref": "#/definitions/DenominazioneTypeDef"
+                },
+                "competenzeOrganoIstit": {
+                    "$ref": "#/definitions/DenominazioneTypeDef"
+                },
+                "uffici": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": [
+                        {
+                            "$ref": "#/definitions/ArticolazioneUfficioTypeDef"
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "denominazioneOrganoIstit",
+                "competenzeOrganoIstit",
+                "uffici"
+            ]
+        },
+        "ArticolazioneUfficioTypeDef": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "tipologiaUfficio": {
+                    "$ref": "#/definitions/TipologiaUfficioTypeDef"
+                },
+                "denominazioneUfficio": {
+                    "$ref": "#/definitions/DenominazioneTypeDef"
+                },
+                "competenzeUfficio": {
+                    "$ref": "#/definitions/DenominazioneTypeDef"
+                },
+                "nominativoDirigenteResp": {
+                    "$ref": "#/definitions/DenominazioneTypeDef"
+                },
+                "qualificaDirigenteResp": {
+                    "$ref": "#/definitions/DenominazioneTypeDef"
+                },
+                "contatti": {
+                    "$ref": "#/definitions/ContattiTypeDef"
+                }
+            },
+            "required": [
+                "tipologiaUfficio",
+                "denominazioneUfficio",
+                "competenzeUfficio",
+                "nominativoDirigenteResp",
+                "qualificaDirigenteResp",
+                "contatti"
+            ]
+        },
+        "TipologiaUfficioTypeDef": {
+            "enum": [
+                "Ufficio dirigenziale",
+                "Ufficio non dirigenziale"
+            ]
+        },
+        "ContattiTypeDef": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "recapitoTelefonico": {
+                    "$ref": "#/definitions/NumTelefonoTypeDef"
+                },
+                "postaElettronica": {
+                    "type": "object",
+                    "oneOf": [
+                        {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "postaElettronicaOrdinaria": {
+                                    "$ref": "#/definitions/EmailTypeDef"
+                                }
+                            },
+                            "required": [
+                                "postaElettronicaOrdinaria"
+                            ]
+                        },
+                        {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "postaElettronicaCertificata": {
+                                    "$ref": "#/definitions/EmailTypeDef"
+                                }
+                            },
+                            "required": [
+                                "postaElettronicaCertificata"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "recapitoTelefonico",
+                "postaElettronica"
+            ]
+        },
+        "IntestazioneTypeDef": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "amministrazione": {
+                    "$ref": "#/definitions/AmministrazioneTypeDef"
+                },
+                "dataPubblicazione": {
+                    "$ref": "#/definitions/DateItaTypeDef"
+                }
+            },
+            "required": [
+                "amministrazione",
+                "dataPubblicazione"
+            ]
+        },
+        "AmministrazioneTypeDef": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "codiceFiscale": {
+                    "$ref": "#/definitions/CodiceFiscalePgTypeDef"
+                },
+                "denominazione": {
+                    "$ref": "#/definitions/DenominazioneTypeDef"
+                },
+                "ambito": {
+                    "$comment": "Se non specificato si considera il valore di default 'Soggetto tenuto all'obbligo di pubblicazione'",
+                    "$ref": "#/definitions/DichiarazioneAmbitoTypeDef"
+                }
+            },
+            "required": [
+                "codiceFiscale"
+            ]
+        },
+        "DichiarazioneAmbitoTypeDef": {
+            "default": "Soggetto tenuto all'obbligo di pubblicazione",
+            "enum": [
+                "Soggetto tenuto all'obbligo di pubblicazione",
+                "Soggetto tenuto parzialmente all'obbligo di pubblicazione",
+                "Soggetto non tenuto all'obbligo di pubblicazione"
+            ]
+        },
+        "AnnoRifTypeDef": {
+            "type": "integer",
+            "minimum": 2000,
+            "maximum": 9999
+        },
+        "TrimestreTypeDef": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+        },
+        "DateItaTypeDef": {
+            "description": "Data e ora in formato GG/MM/AAAA H24:MM:SS",
+            "type": "string",
+            "pattern": "^((0[1-9]|[12][0-9]|3[01])\\/(0[1-9]|1[0-2])\\/([2]\\d{3}))$"
+        },
+        "DateTimeItaTypeDef": {
+            "description": "Data in formato GG/MM/AAAA",
+            "type": "string",
+            "pattern": "^((0[1-9]|[12][0-9]|3[01])\\/(0[1-9]|1[0-2])\\/([2]\\d{3}) ([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9]))$"
+        },
+        "ImportoTypeDef": {
+            "type": "number",
+            "minimum": 0.01
+        },
+        "CodiceFiscalePfTypeDef": {
+            "description": "Codice fiscale di persona fisica",
+            "type": "string",
+            "pattern": "^([A-Za-z]{6}[0-9LMNPQRSTUVlmnpqrstuv]{2}[ABCDEHLMPRSTabcdehlmprst]{1}[0-9LMNPQRSTUVlmnpqrstuv]{2}[A-Za-z]{1}[0-9LMNPQRSTUVlmnpqrstuv]{3}[A-Za-z]{1})$|([0-9]{11})$",
+            "example": "GRNGDU55H19G224I"
+        },
+        "CodiceFiscalePgTypeDef": {
+            "description": "Codice fiscale di persona giuridica",
+            "type": "string",
+            "pattern": "^\\d{11}$",
+            "example": "80012850543"
+        },
+        "NumTelefonoTypeDef": {
+            "type": "string",
+            "pattern": "^[0-9+ ()]{8,20}$"
+        },
+        "EmailTypeDef": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$"
+        },
+        "URLTypeDef": {
+            "type": "string",
+            "pattern": "^(https:\\/\\/www\\.|http:\\/\\/www\\.|https:\\/\\/|http:\\/\\/)?[a-zA-Z]{2,}(\\.[a-zA-Z]{2,})(\\.[a-zA-Z]{2,})?\\/[a-zA-Z0-9]{2,}|((https:\\/\\/www\\.|http:\\/\\/www\\.|https:\\/\\/|http:\\/\\/)?[a-zA-Z]{2,}(\\.[a-zA-Z]{2,})(\\.[a-zA-Z]{2,})?)|(https:\\/\\/www\\.|http:\\/\\/www\\.|https:\\/\\/|http:\\/\\/)?[a-zA-Z0-9]{2,}\\.[a-zA-Z0-9]{2,}\\.[a-zA-Z0-9]{2,}(\\.[a-zA-Z0-9]{2,})?$"
+        },
+        "DenominazioneTypeDef": {
+            "type": "string",
+            "maxLength": 256,
+            "minLength": 1
+        }
+    }
+}

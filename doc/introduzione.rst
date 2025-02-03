@@ -1,78 +1,102 @@
-Guida alla consultazione
-========================
+Schema Allegato articolo 4 bis
+==============================
 
-Questa prima versione del libro bianco viene pubblicata dopo un percorso
-di ricerca, analisi, confronto e stesura partecipata all’interno del
-coordinamento della task force
+La norma
 
-Il documento, che è in consultazione fino all’11 marzo 2018, non ha
-l’ambizione di trattare i molteplici aspetti e le implicazioni relative
-all’Intelligenza Artificiale.
+1. L'Agenzia per l'Italia digitale, d'intesa con il Ministero dell'economia e
+delle finanze, al fine di promuovere l'accesso e migliorare la comprensione dei
+dati relativi all'utilizzo delle risorse pubbliche, gestisce il sito internet
+denominato "Soldi pubblici" che consente l'accesso ai dati dei pagamenti delle
+pubbliche amministrazioni e ne permette la consultazione in relazione alla
+tipologia di spesa sostenuta e alle amministrazioni che l'hanno effettuata, nonché
+all'ambito temporale di riferimento.
 
-Rappresentando un punto di partenza più che un punto di arrivo,
-chiediamo a tutti coloro che si apprestano a commentare e contribuire
-alla versione definitiva del testo, di leggere con molta attenzione cosa
-è e cosa non è questo libro bianco.
+2. Ciascuna amministrazione pubblica sul proprio sito istituzionale, in una parte
+chiaramente identificabile della sezione "Amministrazione trasparente", i dati
+sui propri pagamenti e ne permette la consultazione in relazione alla tipologia
+di spesa sostenuta, all'ambito temporale di riferimento e ai beneficiari.
+3. Per le spese in materia di personale si applica quanto previsto dagli articoli
+da 15 a 20.
 
-**Cosa non è e cosa non vuole essere:**
+4. Dalle disposizioni di cui ai commi 1 e 2 non devono derivare nuovi o maggiori
+oneri a carico della finanza pubblica. Le amministrazioni interessate provvedono
+ai relativi adempimenti nell'ambito delle risorse umane, strumentali e finanziarie
+disponibili a legislazione vigente.
 
-1. **Non è il testo definitivo.**
 
-2. **Non è un testo scientifico né ha l’ambizione di presentare,
-   analizzare e affrontare le implicazioni dell’IA a 360 gradi.**
+Schema per la definizione dell'allegato all'articolo 4 bis
+==========================================================
 
-3. **Non nasce come testo di policy.**
+.. schema:: allegato_articolo_4_bis
+    :title: Schema Allegato articolo 4 bis
+    :description: Schema per la definizione dell'allegato all'articolo 4 bis
 
-**Cosa è e cosa diventerà:**
+    :fields:
+        - name: id
+          type: integer
+          description: Identificativo univoco dell'allegato
+          required: true
+          example: 1
 
-1. **È un testo in progress:** abbiamo pubblicato una prima bozza che
-   definisce un perimetro all’interno del quale chiediamo a chiunque
-   sia interessato di esprimersi, avendo ben chiaro l’obiettivo del
-   libro bianco. Il testo definitivo, corredato di *schede di
-   approfondimento tematico* verrà presentato e pubblicato alla fine
-   della consultazione e diventerà un punto di partenza che
-   permetterà all’Italia di confrontarsi sulle tematiche trattate
-   anche sui tavoli internazionali.
+        - name: name
+          type: string
+          description: Nome dell'allegato
+          required: true
+          example: "Allegato 1"
 
-2. **È un testo che intende approfondire un aspetto specifico dell’IA:**
-   come gli strumenti dell’Intelligenza Artificiale possano
-   semplificare il rapporto tra stato e cittadini. Il libro bianco
-   intende affrontare i temi delineati con un approccio snello e
-   sintetico in modo da permetterne la lettura anche ai non addetti
-   ai lavori.
+        - name: description
+          type: string
+          description: Descrizione dell'allegato
+          required: false
+          example: "Descrizione dell'allegato"
 
-3. **Il testo definitivo comprenderà anche una sezione dedicata a
-   raccomandazioni per il settore pubblico, che nascono per
-   rispondere alle sfide affrontate nel libro bianco** e che
-   potranno essere proposte durante il periodo di consultazione
-   secondo le seguenti indicazioni.
+        - name: file
+          type: string
+          description: Percorso del file allegato
+          required: true
+          example: "/path/to/file.pdf"
 
-**Istruzioni per la consultazione pubblica**
+        - name: created_at
+          type: string
+          description: Data di creazione dell'allegato
+          required: true
+          example: "2020-01-01T00:00:00Z"
 
-Il libro bianco è in consultazione fino all’11 marzo 2018.
+        - name: updated_at
+          type: string
+          description: Data di ultima modifica dell'allegato
+          required: true
+          example: "2020-01-01T00:00:00Z"
 
-**Come partecipare**
+        - name: deleted_at
+          type: string
+          description: Data di eliminazione dell'allegato
+          required: false
+          example: "2020-01-01T00:00:00Z"
 
-Puoi contribuire alla consultazione con integrazioni e suggerimenti
-inserendo un commento nella sezione “Mostra commenti” presente alla fine
-di ogni capitolo, di ogni sfida del libro bianco e del Glossario
-dell’Intelligenza Artificiale.
+        - name: article_id
+          type: integer
+          description: Identificativo dell'articolo a cui è allegato
+          required: true
+          example: 1
 
-Per contribuire con delle Raccomandazioni, compila il form
-“`Raccomandazioni IA <https://goo.gl/forms/UhOXTDZXluGP8T6J2>`__”
+        - name: article
+          type: object
+          description: Articolo a cui è allegato
+          required: true
+          schema: articolo
 
-**Esiti della consultazione**
+        - name: created_by
+          type: object
+          description: Utente che ha creato l'allegato
+          required: true
+          schema: utente
 
-I risultati della consultazione pubblica on line saranno discussi dalla
-Task force sull’Intelligenza Artificiale dell’Agenzia per l'Italia
-Digitale che valuterà le integrazioni da apportare per la pubblicazione
-del testo definitivo del libro bianco.
+        - name: updated_by
+          type: object
+          description: Utente che ha modificato l'allegato
+          required: true
+          schema: utente
 
-**Destinatari**
-
-Le amministrazioni, gli addetti ai lavori, le realtà che studiano o
-lavorano con l’IA e chiunque intenda dare il proprio contributo sono
-invitati a partecipare alla presente consultazione.
-
-*L’Associazione AI*IA ha inviato un contributo al libro bianco che sarà
-integrato nel corso della consultazione.*
+        - name: deleted_by
+          type: object
