@@ -5,7 +5,7 @@ import sys
 import os
 
 # -- PROJECT Variables ----------------------------------------------------
-settings_project_name = 'Libro bianco IA'
+settings_project_name = 'Schemi di Pubblicazione'
 settings_copyright_copyleft = 'CC0 1.0 Universal - Autorità Nazionale Anticorruzione'
 settings_editor_name = 'A.N.AC. - Autorità Nazionale Anticorruzione'
 settings_doc_version = "stabile"

@@ -37,19 +37,14 @@
     {% include "offcanvas.html" %}
     <div class="sh__wrapper">
     <div class="sh__institutional">
-        <a class="pushy-menu-btn menu-btn" href="#"><img src="{{ pathto('_static/images/anac.png', 1) }}"></a>
-
         <a href="http://www.anticorruzione.it" title="ANAC">Autotrità Nazionale Anticorruzione</a>
     </div><!--/sh__institutional-->
     <div class="sh__tabs">
     <ul class="sh__tabsul">
-      <li class="network-title delimiter">Piattaforma Unica della Trasparenza
-        <img class="u-alignTop u-margin-left-s u-margin-right-s" src="{{ pathto('_static/images/anac.png', 1) }}">
-      </li>
+      <li class="network-title delimiter">Piattaforma Unica della Trasparenza</li>
     </ul>
     </div><!--/.sh__tabs-->
 		<div class="burger" data-toggle="wy-nav-top">
-		  <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAzMiAzMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzIgMzI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoJLnN0MHtmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik02LjEsOC45bDE3LDE3YzAuOCwwLjgsMi4xLDAuOCwyLjgsMGMwLjgtMC44LDAuOC0yLjEsMC0yLjhsLTE3LTE3Yy0wLjgtMC44LTIuMS0wLjgtMi44LDBTNS4zLDguMiw2LjEsOC45eiINCgkvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTIzLjEsNi4xbC0xNywxN2MtMC44LDAuOC0wLjgsMi4xLDAsMi44YzAuOCwwLjgsMi4xLDAuOCwyLjgsMGwxNy0xN2MwLjgtMC44LDAuOC0yLjEsMC0yLjgNCglDMjUuMSw1LjMsMjMuOCw1LjMsMjMuMSw2LjF6Ii8+DQo8L3N2Zz4=">
 		</div>
     </div><!--/.wrapper-->
 </div><!--/#slimheader-->
@@ -159,7 +154,6 @@
     </div>
     {% if READTHEDOCS %}
     {% set script_files = script_files + ['_static/js/offcanvas.js'] %}
-    {% set script_files = script_files + ['_static/js/disqus.js'] %}
     {% endif %}
     {% include "versions.html" %} {% if not embedded %}
     <script type="text/javascript">

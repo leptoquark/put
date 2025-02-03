@@ -1,7 +1,7 @@
-**Libro bianco**
+**ANAC**
 
-L’Intelligenza Artificiale al servizio del cittadino
-++++++++++++++++++++++++++++++++++++++++++++++++++++
+Schemi di pubblicazione ANAC
+++++++++++++++++++++++++++++
 
 .. toctree::
    :maxdepth: 2
