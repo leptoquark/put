@@ -27,16 +27,6 @@ disponibili a legislazione vigente.
 Schema per la definizione dell'allegato all'articolo 4 bis
 ==========================================================
 
-.. mermaid::
+.. image:: ../media/art.4-bis-v1.0.0.png
 
-   sequenceDiagram
-      participant Alice
-      participant Bob
-      Alice->John: Hello John, how are you?
-      loop Healthcheck
-          John->John: Fight against hypochondria
-      end
-      Note right of John: Rational thoughts <br/>prevail...
-      John-->Alice: Great!
-      John->Bob: How about you?
-      Bob-->John: Jolly good!
+*Figura diagramma delle classi per il media*
