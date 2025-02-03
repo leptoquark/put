@@ -5,9 +5,6 @@ Questa documentazione fornisce una guida dettagliata su come strutturare i dati 
 
 Questo schema organizza e standardizza la pubblicazione delle informazioni finanziarie relative ai pagamenti effettuati dalle amministrazioni pubbliche.
 
-Diagramma delle Classi del JSON Schema "art4-bis-v1.0.0"
---------------------------------------------------------
-
 Il diagramma seguente fornisce una rappresentazione visiva della struttura e delle relazioni tra i vari componenti del JSON Schema "art4-bis-v1.0.0". Questo schema è utilizzato per documentare e standardizzare la pubblicazione dei dati finanziari delle amministrazioni pubbliche, in particolare i dettagli dei pagamenti effettuati.
 
 Il diagramma delle classi aiuta a visualizzare come i dati sono organizzati e come interagiscono tra loro, fornendo una chiara comprensione delle relazioni tra le diverse parti del schema. È uno strumento essenziale per gli sviluppatori che implementano questo schema nei loro sistemi e per gli analisti che devono comprendere la struttura dei dati.
@@ -19,6 +16,7 @@ Visualizzando le classi e le loro connessioni, gli utenti possono facilmente ide
    :align: center
 
 Il diagramma mostra:
+
 - **Intestazione**: Include informazioni identificative dell'amministrazione come il codice fiscale, la denominazione e l'ambito di pubblicazione.
 - **Ambito Temporale di Riferimento**: Definisce l'anno e il trimestre di riferimento dei dati finanziari pubblicati.
 - **Sintesi Pagamenti**: Array di oggetti che descrive i dettagli dei pagamenti, con possibilità di specificare se la spesa è corrente o in conto capitale, oltre all'importo e al beneficiario dei pagamenti.
