@@ -28,4 +28,6 @@ di pubblicazione ANAC. Ogni qualvolta ci sarà un aggiornamento o una modifica d
 .. toctree::
    :maxdepth: 2
 
-   doc/introduzione
+   doc/allegato_1
+   doc/allegato_2
+   doc/allegato_3

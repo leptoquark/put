@@ -15,6 +15,7 @@ all'ambito temporale di riferimento.
 chiaramente identificabile della sezione "Amministrazione trasparente", i dati
 sui propri pagamenti e ne permette la consultazione in relazione alla tipologia
 di spesa sostenuta, all'ambito temporale di riferimento e ai beneficiari.
+
 3. Per le spese in materia di personale si applica quanto previsto dagli articoli
 da 15 a 20.
 
@@ -24,9 +25,16 @@ ai relativi adempimenti nell'ambito delle risorse umane, strumentali e finanziar
 disponibili a legislazione vigente.
 
 
-Schema per la definizione dell'allegato all'articolo 4 bis
-==========================================================
+Questo schema organizza e standardizza la pubblicazione delle informazioni finanziarie relative ai pagamenti effettuati dalle amministrazioni pubbliche.
 
 .. image:: ../media/art.4-bis-v1.0.0.png
 
-*Figura diagramma delle classi per il media*
+*Diagramma delle classi per lo schema dell'articolo 4 bis*
+
+Schema: art4-bis-v1.0.0
+Questo schema organizza e standardizza la pubblicazione delle informazioni finanziarie relative ai pagamenti effettuati dalle amministrazioni pubbliche.
+Dettagli dei Campi
+
+- Intestazione (Oggetto, Obbligatorio): Contiene le informazioni identificative dell'amministrazione pubblicatrice.
+- Ambito Temporale di Riferimento (Oggetto, Obbligatorio): Indica il periodo di riferimento dei dati riportati.
+- Sintesi Pagamenti (Array di Oggetti, Obbligatorio): Elenco dei pagamenti effettuati, classificati in categorie.
