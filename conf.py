@@ -90,6 +90,7 @@ else:
             '_static/css/theme.css',
             '_static/css/custom.css',
         ],
+        'style' : '_static/css/theme.css',
     }
 
 # The name for this set of Sphinx documents.  If None, it defaults to
