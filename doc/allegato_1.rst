@@ -8,7 +8,7 @@ Per facilitare l'implementazione e la verifica del JSON conforme ai requisiti de
 
 .. raw:: html
 
-    <a href="../schemi/art4-bis-v1.0.0.png" download="art4-bis.v1.0.0.json">Scarica il JSON Schema</a>
+    <a href="https://raw.githubusercontent.com/leptoquark/put/refs/heads/main/schemi/art4-v1.0.0.schema.json" class="btn float-right" title="Download schema" >Scarica il JSON Schema<span class="fa fa-download"></span></a>
 
 
 Questa documentazione fornisce una guida dettagliata su come strutturare i dati finanziari secondo il JSON Schema "art4-bis-v1.0.0", facilitando l'interoperabilità e la standardizzazione dei dati per le amministrazioni pubbliche.
