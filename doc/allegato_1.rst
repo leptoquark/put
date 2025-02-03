@@ -31,9 +31,11 @@ Dettagli dei campi
 - **Intestazione** (Oggetto Obbligatorio)
 
   - ``amministrazione`` (Oggetto)
+
     - ``codiceFiscale``: Codice fiscale dell'amministrazione (Stringa, 11 cifre numeriche)
     - ``denominazione``: Nome formale dell'amministrazione (Stringa, max 256 caratteri)
     - ``ambito``: Campo enum che specifica l'obbligo di pubblicazione (Valori: "Soggetto tenuto all'obbligo di pubblicazione", "Soggetto tenuto parzialmente all'obbligo di pubblicazione", "Soggetto non tenuto all'obbligo di pubblicazione")
+
   - ``dataPubblicazione``: Data in cui i dati vengono pubblicati (Stringa, formato GG/MM/AAAA)
 
 - **Ambito Temporale di Riferimento** (Oggetto Obbligatorio)
@@ -49,6 +51,40 @@ Dettagli dei campi
     - ``uscitaInContoCapitale``: Tipo di spesa di capitale (Enum, opzionale, esclusivo con uscitaCorrente)
     - ``importo``: Ammontare del pagamento (Numero, minimo 0.01)
     - ``beneficiario``: Identificativo del beneficiario (Stringa, può essere "Soggetto privato" o un codice fiscale di 11 cifre)
+
+Dettagli dei Campi
+------------------
+
++-------------------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
+| Campo                         | Tipo                  | Descrizione                                                                                                    |
++===============================+=======================+================================================================================================================+
+| **Intestazione**              | Oggetto Obbligatorio  | Contiene i dati identificativi dell'amministrazione.                                                           |
++-------------------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
+| amministrazione               | Oggetto               | Dettagli dell'ente amministrativo.                                                                             |
++-------------------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
+| codiceFiscale                 | Stringa               | Codice fiscale dell'amministrazione (11 cifre numeriche).                                                      |
++-------------------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
+| denominazione                 | Stringa               | Nome formale dell'amministrazione (max 256 caratteri).                                                         |
++-------------------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
+| ambito                        | Enumerazione          | Specifica l'obbligo di pubblicazione ("Soggetto tenuto all'obbligo di pubblicazione", etc.).                    |
++-------------------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
+| dataPubblicazione             | Stringa               | Data di pubblicazione dei dati (formato GG/MM/AAAA).                                                           |
++-------------------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
+| anno                          | Intero                | Anno di riferimento dei dati (min 2000, max 9999).                                                             |
++-------------------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
+| trimestre                     | Intero                | Trimestre dell'anno di riferimento (min 1, max 4).                                                             |
++-------------------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
+| **Sintesi Pagamenti**         | Array di Oggetti      | Elenco dettagliato dei pagamenti effettuati.                                                                   |
++-------------------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
+| uscitaCorrente                | Enumerazione          | Tipo di spesa corrente (opzionale, esclusivo con uscitaInContoCapitale).                                       |
++-------------------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
+| uscitaInContoCapitale         | Enumerazione          | Tipo di spesa di capitale (opzionale, esclusivo con uscitaCorrente).                                           |
++-------------------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
+| importo                       | Numero                | Ammontare del pagamento (minimo 0.01).                                                                         |
++-------------------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
+| beneficiario                  | Stringa               | Identificativo del beneficiario ("Soggetto privato" o codice fiscale di 11 cifre).                             |
++-------------------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
+
 
 Esempio di JSON
 ---------------
