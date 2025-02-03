@@ -15,16 +15,6 @@ Questo strumento visivo aiuta gli sviluppatori e gli analisti a comprendere rapi
 
 Incorpora il diagramma nel contesto della documentazione completa per fornire ai lettori una guida visiva che complemente le descrizioni tecniche dettagliate dei campi e delle funzionalità dello schema.
 
-.. mermaid::
-
-    %%{init: {'theme': 'default'}}%%
-    classDiagram
-        Class01 <|-- Class02
-        Class03 *-- Class04
-        Class05 o-- Class06
-        Class07 .. Class08
-        Class09 --|> Class10
-
 Sostituisci il codice Mermaid con il diagramma effettivo per visualizzare la struttura del tuo JSON Schema.
 
 

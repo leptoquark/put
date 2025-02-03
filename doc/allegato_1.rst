@@ -5,13 +5,27 @@ Questa documentazione fornisce una guida dettagliata su come strutturare i dati 
 
 Questo schema organizza e standardizza la pubblicazione delle informazioni finanziarie relative ai pagamenti effettuati dalle amministrazioni pubbliche.
 
+Diagramma delle Classi del JSON Schema "art4-bis-v1.0.0"
+--------------------------------------------------------
+
+Il diagramma seguente fornisce una rappresentazione visiva della struttura e delle relazioni tra i vari componenti del JSON Schema "art4-bis-v1.0.0". Questo schema è utilizzato per documentare e standardizzare la pubblicazione dei dati finanziari delle amministrazioni pubbliche, in particolare i dettagli dei pagamenti effettuati.
+
+Il diagramma delle classi aiuta a visualizzare come i dati sono organizzati e come interagiscono tra loro, fornendo una chiara comprensione delle relazioni tra le diverse parti del schema. È uno strumento essenziale per gli sviluppatori che implementano questo schema nei loro sistemi e per gli analisti che devono comprendere la struttura dei dati.
+
+Visualizzando le classi e le loro connessioni, gli utenti possono facilmente identificare quali dati sono necessari, come sono collegati e quali informazioni sono obbligatorie o opzionali.
+
 .. image:: ../media/art.4-bis-v1.0.0.png
+   :alt: Diagramma delle classi per lo schema dell'articolo 4 bis
+   :align: center
 
-*Diagramma delle classi per lo schema dell'articolo 4 bis*
+Il diagramma mostra:
+- **Intestazione**: Include informazioni identificative dell'amministrazione come il codice fiscale, la denominazione e l'ambito di pubblicazione.
+- **Ambito Temporale di Riferimento**: Definisce l'anno e il trimestre di riferimento dei dati finanziari pubblicati.
+- **Sintesi Pagamenti**: Array di oggetti che descrive i dettagli dei pagamenti, con possibilità di specificare se la spesa è corrente o in conto capitale, oltre all'importo e al beneficiario dei pagamenti.
 
-Schema: art4-bis-v1.0.0
-Questo schema organizza e standardizza la pubblicazione delle informazioni finanziarie relative ai pagamenti effettuati dalle amministrazioni pubbliche.
-Dettagli dei Campi
+Questo schema visivo è integrato nella documentazione per offrire un accesso immediato alla comprensione della struttura dei dati senza la necessità di analizzare il codice del JSON Schema.
+
+Continua a leggere per i dettagli specifici di ciascun campo e per gli esempi di come popolare il JSON seguendo questo schema.
 
 Dettagli dei campi
 ------------------
@@ -32,7 +46,7 @@ Dettagli dei campi
 - **Sintesi Pagamenti** (Array di Oggetti Obbligatorio, minItems: 1)
 
   - Elementi dell'array (Oggetto):
-  
+
     - ``uscitaCorrente``: Tipo di spesa corrente (Enum, opzionale, esclusivo con uscitaInContoCapitale)
     - ``uscitaInContoCapitale``: Tipo di spesa di capitale (Enum, opzionale, esclusivo con uscitaCorrente)
     - ``importo``: Ammontare del pagamento (Numero, minimo 0.01)
