@@ -66,7 +66,7 @@ Dettagli dei Campi
 +-------------------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
 | denominazione                 | Stringa               | Nome formale dell'amministrazione (max 256 caratteri).                                                         |
 +-------------------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
-| ambito                        | Enumerazione          | Specifica l'obbligo di pubblicazione ("Soggetto tenuto all'obbligo di pubblicazione", etc.).                    |
+| ambito                        | Enumerazione          | Specifica l'obbligo di pubblicazione ("Soggetto tenuto all'obbligo di pubblicazione", etc.).                   |
 +-------------------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
 | dataPubblicazione             | Stringa               | Data di pubblicazione dei dati (formato GG/MM/AAAA).                                                           |
 +-------------------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
