@@ -2,15 +2,13 @@
 # -*- coding: utf-8 -*-
 
 # -- PROJECT Variables ----------------------------------------------------
-settings_project_name = u"Linee Guida sull'interoperabilità tecnica delle Pubbliche Amministrazioni "
-settings_copyright_copyleft = "Agenzia per l'Italia Digitale"
-settings_editor_name = "Agenzia per l'Italia Digitale"
-settings_doc_version = "Bozza in consultazione"
-settings_doc_release = "Bozza in consultazione"
-settings_basename = "lg-modellointeroperabilita-docs"
-settings_file_name = "lg-modellointeroperabilita-docs"
-settings_discourse_url = "https://forum.italia.it/"
-
+settings_project_name = u"Linee guida tecniche per il formato e le modalità di pubblicazione della sezione trasparenza del sito istituzionale"
+settings_copyright_copyleft = "Autorità Nazionale Anticorruzione"
+settings_editor_name = "Autorità Nazionale Anticorruizione"
+settings_doc_version = "Pubblicazione"
+settings_doc_release = "Pubblicazione"
+settings_basename = "put-docs"
+settings_file_name = "put-docs"
 # -- No need to change below here
 
 import sys, os
