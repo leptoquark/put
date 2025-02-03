@@ -12,7 +12,7 @@ build:
     nodejs: "16"
   jobs:
     post_install:
-      - npm install -g @mermaid-js/mermaid-cli
+      - npm install sphinxcontrib-mermaid 
     # You can also specify other tool versions:
     # nodejs: "20"
     # rust: "1.70"
