@@ -1,6 +1,16 @@
 Schema Allegato articolo 4 bis
 ==============================
 
+Scarica lo Schema JSON
+----------------------
+
+Per facilitare l'implementazione e la verifica del JSON conforme ai requisiti dell'amministrazione pubblica, mettiamo a disposizione il JSON Schema completo. Puoi scaricare lo schema dal link sottostante per utilizzarlo nei tuoi progetti o per ulteriori test e validazioni.
+
+.. raw:: html
+
+    <a href="../schemi/art4-bis-v1.0.0.png" download="art4-bis.v1.0.0.json">Scarica il JSON Schema</a>
+
+
 Questa documentazione fornisce una guida dettagliata su come strutturare i dati finanziari secondo il JSON Schema "art4-bis-v1.0.0", facilitando l'interoperabilità e la standardizzazione dei dati per le amministrazioni pubbliche.
 
 Questo schema organizza e standardizza la pubblicazione delle informazioni finanziarie relative ai pagamenti effettuati dalle amministrazioni pubbliche.
@@ -23,34 +33,7 @@ Il diagramma mostra:
 
 Questo schema visivo è integrato nella documentazione per offrire un accesso immediato alla comprensione della struttura dei dati senza la necessità di analizzare il codice del JSON Schema.
 
-Continua a leggere per i dettagli specifici di ciascun campo e per gli esempi di come popolare il JSON seguendo questo schema.
-
-Dettagli dei campi
-------------------
-
-- **Intestazione** (Oggetto Obbligatorio)
-
-  - ``amministrazione`` (Oggetto)
-
-    - ``codiceFiscale``: Codice fiscale dell'amministrazione (Stringa, 11 cifre numeriche)
-    - ``denominazione``: Nome formale dell'amministrazione (Stringa, max 256 caratteri)
-    - ``ambito``: Campo enum che specifica l'obbligo di pubblicazione (Valori: "Soggetto tenuto all'obbligo di pubblicazione", "Soggetto tenuto parzialmente all'obbligo di pubblicazione", "Soggetto non tenuto all'obbligo di pubblicazione")
-
-  - ``dataPubblicazione``: Data in cui i dati vengono pubblicati (Stringa, formato GG/MM/AAAA)
-
-- **Ambito Temporale di Riferimento** (Oggetto Obbligatorio)
-
-  - ``anno``: Anno di riferimento dei dati (Intero, minimo 2000, massimo 9999)
-  - ``trimestre``: Trimestre dell'anno (Intero, minimo 1, massimo 4)
-
-- **Sintesi Pagamenti** (Array di Oggetti Obbligatorio, minItems: 1)
-
-  - Elementi dell'array (Oggetto):
-
-    - ``uscitaCorrente``: Tipo di spesa corrente (Enum, opzionale, esclusivo con uscitaInContoCapitale)
-    - ``uscitaInContoCapitale``: Tipo di spesa di capitale (Enum, opzionale, esclusivo con uscitaCorrente)
-    - ``importo``: Ammontare del pagamento (Numero, minimo 0.01)
-    - ``beneficiario``: Identificativo del beneficiario (Stringa, può essere "Soggetto privato" o un codice fiscale di 11 cifre)
+Di seguito vengono mostrati i dettagli specifici di ciascun campo un esempio di come popolare il JSON seguendo questo schema.
 
 Dettagli dei Campi
 ------------------
