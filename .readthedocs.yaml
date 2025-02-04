@@ -4,7 +4,7 @@
 # Required
 version: 2
 
-formats: all
+#formats: all
 
 # Set the OS, Python version and other tools you might need
 build:
@@ -12,6 +12,7 @@ build:
   tools:
     python: "3.12"
   commands:
+    - mkdir -p $READTHEDOCS_OUTPUT/html/
     - pip install json-schema-for-humans
     - python jsonforhumans/visu_schema.py
     # You can also specify other tool versions:
