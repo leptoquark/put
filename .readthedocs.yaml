@@ -14,7 +14,6 @@ build:
   jobs:
     pre_build:
        - python jsonforhumans/visu_schema.py
-       - ls docs/_static
     # You can also specify other tool versions:
     # nodejs: "20"
     # rust: "1.70"
