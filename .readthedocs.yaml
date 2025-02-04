@@ -13,8 +13,10 @@ build:
     python: "3.12"
   commands:
     - mkdir -p $READTHEDOCS_OUTPUT/html/
+    - echo $READTHEDOCS_OUTPUT
     - pip install json-schema-for-humans
     - python jsonforhumans/visu_schema.py
+
     # You can also specify other tool versions:
     # nodejs: "20"
     # rust: "1.70"
