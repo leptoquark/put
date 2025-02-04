@@ -5,7 +5,7 @@ from glob import glob
 
 WORK_DIR = '../schemi'
 SCHEMA_FILE = "art4-bis-v1.0.0.schema.json"
-OUTPUT_FILE = "art4-bis.html"
+OUTPUT_FILE = "index.html"
 
 config = GenerationConfiguration(copy_css=False, expand_buttons=True)
 
