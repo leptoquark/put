@@ -7,6 +7,10 @@ L'Autorità fornisce schemi di pubblicazione per supportare enti e amministrazio
 "Amministrazione Trasparente" dei portali istituzionali. Questo approccio semplifica le attività di pubblicazione
 e consultazione dei dati, grazie a modalità uniformi di organizzazione, codificazione e rappresentazione.
 
+.. exec-code::
+
+    print("Hello from Python inside Read the Docs!")
+
 Sono stati approvati tre nuovi schemi dall'Autorità, resi disponibili sul sito istituzionale, relativi a:
 
 - Utilizzo delle risorse pubbliche;
@@ -31,7 +35,3 @@ di pubblicazione ANAC. Ogni qualvolta ci sarà un aggiornamento o una modifica d
    doc/allegato_1
    doc/allegato_2
    doc/allegato_3
-
-.. exec-code::
-
-    print("Hello from Python inside Read the Docs!")
