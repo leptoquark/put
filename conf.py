@@ -93,6 +93,9 @@ else:
         'style' : '_static/css/theme.css',
     }
 
+
+html_static_path = ["_static"]
+
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 #html_title = None
