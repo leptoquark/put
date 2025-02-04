@@ -1,14 +1,21 @@
 Schema Allegato articolo 4 bis
 ==============================
 
+Schemi di pubblicazione
+-----------------------
+Gli schemi rappresentano informazioni da pubblicare ex-novo nella Sezione “Amministrazione Trasparente” del sito istituzionale dell’amministrazione, sotto-sezione di primo livello “Pagamenti dell’amministrazione” e sotto-sezione di secondo livello “Dati sui pagamenti”.
+
 Scarica lo Schema JSON
 ----------------------
 
 Per facilitare l'implementazione e la verifica del JSON conforme ai requisiti dell'amministrazione pubblica, mettiamo a disposizione il JSON Schema completo. Puoi scaricare lo schema dal link sottostante per utilizzarlo nei tuoi progetti o per ulteriori test e validazioni.
 
+
 .. raw:: html
 
-    <a href="https://raw.githubusercontent.com/leptoquark/put/refs/heads/main/schemi/art4-v1.0.0.schema.json" class="btn float-right" title="Download schema" >Scarica il JSON Schema<span class="fa fa-download"></span></a>
+    <a href="https://raw.githubusercontent.com/leptoquark/put/refs/heads/main/schemi/art4-bis-v1.0.0.schema.json" class="btn float-right" title="Download schema" >Scarica il JSON Schema<span class="fa fa-download"></span></a>
+
+
 
 
 Questa documentazione fornisce una guida dettagliata su come strutturare i dati finanziari secondo il JSON Schema "art4-bis-v1.0.0", facilitando l'interoperabilità e la standardizzazione dei dati per le amministrazioni pubbliche.
@@ -77,7 +84,6 @@ Dettagli dei Campi
 +-------------------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
 | beneficiario                  | Stringa               | Identificativo del beneficiario ("Soggetto privato" o codice fiscale di 11 cifre).                             |
 +-------------------------------+-----------------------+----------------------------------------------------------------------------------------------------------------+
-
 
 Esempio di JSON
 ---------------
