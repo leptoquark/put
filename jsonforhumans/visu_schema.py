@@ -1,7 +1,7 @@
 import os
 
 # Percorso in cui salvare il file HTML
-output_dir = "docs/_static"
+output_dir = "_readthedocs/html/_static"
 output_path = os.path.join(output_dir, "generated.html")
 
 # Crea la directory se non esiste
