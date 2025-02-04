@@ -22,7 +22,8 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
-    'sphinx.ext.ifconfig'
+    'sphinx.ext.ifconfig',
+    'sphinx_exec_code'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

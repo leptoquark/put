@@ -31,3 +31,7 @@ di pubblicazione ANAC. Ogni qualvolta ci sarà un aggiornamento o una modifica d
    doc/allegato_1
    doc/allegato_2
    doc/allegato_3
+
+.. exec-code::
+
+    print("Hello from Python inside Read the Docs!")

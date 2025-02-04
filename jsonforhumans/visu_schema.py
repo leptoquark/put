@@ -15,3 +15,4 @@ for fpath in glob(join(WORK_DIR, "*.json")):
     print(f"{fpath}")
     ofile = join(WORK_DIR, basename(fpath).replace('.json', '.html'))
     generate_from_filename(fpath, ofile, config=config)
+    print (ofile)
