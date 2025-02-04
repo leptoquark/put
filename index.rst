@@ -7,9 +7,9 @@ L'Autorità fornisce schemi di pubblicazione per supportare enti e amministrazio
 "Amministrazione Trasparente" dei portali istituzionali. Questo approccio semplifica le attività di pubblicazione
 e consultazione dei dati, grazie a modalità uniformi di organizzazione, codificazione e rappresentazione.
 
-.. exec-code::
+.. exec_code::
 
-    print("Hello from Python inside Read the Docs!")
+   print('Easy!')
 
 Sono stati approvati tre nuovi schemi dall'Autorità, resi disponibili sul sito istituzionale, relativi a:
 
