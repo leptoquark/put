@@ -11,6 +11,14 @@ e consultazione dei dati, grazie a modalità uniformi di organizzazione, codific
 
    print('Easy!')
 
+Pagina Generata
+===============
+
+.. raw:: html
+
+   <iframe src="_static/generated.html" width="100%" height="500px"></iframe>
+
+
 Sono stati approvati tre nuovi schemi dall'Autorità, resi disponibili sul sito istituzionale, relativi a:
 
 - Utilizzo delle risorse pubbliche;
